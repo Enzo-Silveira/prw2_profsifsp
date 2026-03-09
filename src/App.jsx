@@ -5,7 +5,7 @@ import Lista from "./componentes/Lista/Lista";
 function App() {
   // lista (array) de professores.
   // o valor inicial é um array vazio []
-  const [professores, setProfessores] = useState( [] )
+  const [professores, setProfessores] = useState([]);
   const adicionaProf = (prof) => {
     // criando uma nova lista com o conteúdo anterior da lista.
     //
@@ -21,14 +21,14 @@ function App() {
     // ele retorna uma cópia do array inteiro.
     const listaNova = professores.slice();
     // adicionando o novo professor nesssa lista:
-    listaNova.push(prof)
+    listaNova.push(prof);
     // colocando a nova lista atualizada no estado:
-    setProfessores( listaNova )
-  }
+    setProfessores(listaNova);
+  };
   return (
     <div>
       <Banner />
-      <Formulario aoProfCadastrado={prof => adicionaProf(prof)} />
+      <Formulario aoProfCadastrado={(prof) => adicionaProf(prof)} />
       <Lista objetos={professores} />
     </div>
   );
