@@ -19,6 +19,10 @@ const Formulario = (props) => {
       imagem: imagem,
       area: area,
     });
+    setNome("");
+    setTitulo("");
+    setImagem("");
+    setArea("Progr. Básica");
   };
   return (
     <section className="formulario">
